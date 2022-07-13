@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- EX1: Add an h1 tag with the name of your shop -->
+
+    <button onclick="newHeading()">new heading</button>
+    <button onclick="newBackgroungColor()">new background color</button>
+    <button onclick="newFooterAddress()">new address </button>
+    <button onclick="addNewCssClass()">add class </button>
+    <button onclick="toogle()">new address </button>
+
+    
+    <h1 id="heading">mobile shop</h1>
+
+    <!-- EX2: Add a TABLE with the top 5 products of your shop
+    EX3: Insert for each product an image, a title, a description and a price
+    EX4: Add links to existing Amazon products for each item in the table -->
+
+        <table>
+            <tr>
+                <th>title</th>
+                <th>img</th>
+                <th>link</th>
+                <th>price</th>
+            </tr>
+            <tr>
+                <td>mobile</td>
+                <td><img src="./images/candy.jpg" alt="mobile images"></td>
+                <td><a class="old-class" href="https://www.google.com/"></a>google.com</td>
+                <td>100$</td>
+           </tr>
+            <tr>
+                <td>mobile</td>
+                <td><img src="./images/candy.jpg" alt="mobile images"></td>
+                <td><a class="old-class" href="https://www.google.com/"></a>google.com</td>
+                <td>100$</td>
+           </tr>
+            <tr>
+                <td>mobile</td>
+                <td><img src="./images/candy.jpg" alt="mobile images"></td>
+                <td><a class="old-class" href="https://www.google.com/"></a>google.com</td>
+                <td>100$</td>
+           </tr>
+            <tr>
+                <td>mobile</td>
+                <td><img src="./images/candy.jpg" alt="mobile images"></td>
+                <td><a class="old-class" href="https://www.google.com/"></a>google.com</td>
+                <td>100$</td>
+           </tr>
+            <tr>
+                <td>mobile</td>
+                <td><img src="./images/candy.jpg" alt="mobile images"></td>
+                <td><a class="old-class" href="https://www.google.com/"></a>google.com</td>
+                <td>100$</td>
+            </tr>
+        </table>
+        
+        <!-- EX5: Add a footer with the address and the name of your shop -->
+        
+        
+        
+        <!-- // EX6: Add a message board where the user can type a message in it (no real posting/saving features required!) -->
+        
+        <textarea name="discription" id="text" cols="30" rows="10"></textarea></br>
+        
+        <input type="button" value="submit">
+        
+        
+        <div id="footer">
+            <p>Address: abc road manchester United Kingdom</p>
+        </div>
+
+    <script>
+
+
+// from 7 to 12, should be written in JavaScript:
+
+//     EX7: Write a function to change the h1 text to something else
+
+
+        const newHeading = function() {
+            const changeedHeading = document.getElementById("heading")
+            console.log(changeedHeading)
+            changeedHeading.innerText = "new mobile chop"
+        }
+
+        //  EX8: Write a function to change the page background color
+
+        const newBackgroungColor = function() {
+            const newBackGround = document.querySelector("body")
+            newBackGround.style.backgroundColor = "aqua"
+        }
+
+
+
+        // EX9: Write a function to change the footer address with a fake one
+
+
+        const newFooterAddress = function () {
+                const parentFooter = document.getElementById("footer")
+                const childFooter = document.getElementsByTagName("p")[0]
+                childFooter.innerText = "xyz road Manchester United Kingdom"
+                // console.log(childfooter)
+                // console.log(footerAddress)
+                // footerAddress.innerText = "xyz road Lonon United Kingdom"
+                
+            }
+            
+            
+            // EX10: Write a function to add a CSS class to every Amazon link
+
+            const addNewCssClass = function() {
+                const parentTable = document.getElementsByClassName("table-class")
+                const childTable = document.querySelectorAll("a")
+
+                for (let i = 0; i < childTable.length; i++) {
+                    childTable.className += "new-class"
+                }
+
+
+
+                
+            }
+        
+
+    </script>
+    
+    
+    
+    
+
+</body>
+</html>
+
+    
